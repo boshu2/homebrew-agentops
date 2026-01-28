@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.9/ao-darwin-amd64.tar.gz"
-      sha256 "9508f11a327db64126ab2b6ea28ba044a24c3c3a2fe1267fcde18c65f8dfc0cf"
+      url "https://github.com/boshu2/agentops/releases/download/v1.0.10/ao-darwin-amd64.tar.gz"
+      sha256 "37922d7a66b4476c9333965700325b2ca05f93e06f2b66fda3b3a5b008257ba7"
 
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.9/ao-darwin-arm64.tar.gz"
-      sha256 "2afa5593fb37bed7f2dc6e95d85596abf259706d10e2314d47924cdad4a91b03"
+      url "https://github.com/boshu2/agentops/releases/download/v1.0.10/ao-darwin-arm64.tar.gz"
+      sha256 "ef0dd7c2d49d23a6b08ef15ed357ac3f8a66e36aa390bff86113b35b231ba311"
 
       def install
         bin.install "ao"
@@ -29,15 +29,15 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.9/ao-linux-amd64.tar.gz"
-      sha256 "5d34a24d12f83f71a58165336a4d53bbf5acfe926c5c1ef1613b3c66404e299e"
+      url "https://github.com/boshu2/agentops/releases/download/v1.0.10/ao-linux-amd64.tar.gz"
+      sha256 "6bb0983121007d0818d6d904b109487e5fc615601e1eb3a79205a2b2cc802aa5"
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.9/ao-linux-arm64.tar.gz"
-      sha256 "0bee0b87ff28605f193042efea4293ba5d0111268cba1f0720350aba6ded3a50"
+      url "https://github.com/boshu2/agentops/releases/download/v1.0.10/ao-linux-arm64.tar.gz"
+      sha256 "b0ada8a31efeb95a3ffee2c73742b4d33dd1773a53d5ae2f8edab9fc8baa3351"
       def install
         bin.install "ao"
       end
