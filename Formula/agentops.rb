@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "1.0.12"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.12/ao-darwin-amd64.tar.gz"
-      sha256 "1720f59718c1c7b19510052e7d37c758557af29a0e2fd9a99b55fdb61f86d2f0"
+      url "https://github.com/boshu2/agentops/releases/download/v1.2.0/ao-darwin-amd64.tar.gz"
+      sha256 "bed754e6b19f0171e3aa99f6644a1f488e6d359c62f81d1143d1a35cdbf4bb34"
 
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.12/ao-darwin-arm64.tar.gz"
-      sha256 "67f4008fe59286ac8a954d3acb20ce4f68325ef5ce6f787fa9b3fb8b928e648b"
+      url "https://github.com/boshu2/agentops/releases/download/v1.2.0/ao-darwin-arm64.tar.gz"
+      sha256 "02fe8d503e4facea68ee0960c18b5f349152c7417dd89ef2f90f202c9cd96e15"
 
       def install
         bin.install "ao"
@@ -29,15 +29,15 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.12/ao-linux-amd64.tar.gz"
-      sha256 "c9510a629610c7b68734da2b9864d210d2f3e26588f6a797dea5264c7ad8ba49"
+      url "https://github.com/boshu2/agentops/releases/download/v1.2.0/ao-linux-amd64.tar.gz"
+      sha256 "290c9d1c7d0ad54fbe6b17afda82c6c416ef25f943ca339a6fbf5d94446655a0"
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v1.0.12/ao-linux-arm64.tar.gz"
-      sha256 "95de9938cb8c07db40da95ca6fa86b2b2b24b4861f281b4bbbc3a932d235f195"
+      url "https://github.com/boshu2/agentops/releases/download/v1.2.0/ao-linux-arm64.tar.gz"
+      sha256 "1f4241bd123ad97db57c96225db31ad3b4ba48d344ae9e30e147e44e276d814a"
       def install
         bin.install "ao"
       end
