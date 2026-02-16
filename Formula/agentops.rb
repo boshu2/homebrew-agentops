@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "2.9.1"
+  version "2.9.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v2.9.1/ao-darwin-amd64.tar.gz"
-      sha256 "eff3a46647e355eb9f6f5dbfbfa393a51a4d57d507878bc45a998876a896e35f"
+      url "https://github.com/boshu2/agentops/releases/download/v2.9.2/ao-darwin-amd64.tar.gz"
+      sha256 "05c35e403b6e397290123ed11b83605534fd3b072feaaf3740d99f09c4970f84"
 
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v2.9.1/ao-darwin-arm64.tar.gz"
-      sha256 "2977b36bc86e7dd8ebfa687eb53830c91c3efc667480554c2e40f832dcd85986"
+      url "https://github.com/boshu2/agentops/releases/download/v2.9.2/ao-darwin-arm64.tar.gz"
+      sha256 "67a26a44fda7224d8694ea114132e0bc68533b3539879c9a66d30d1c5e55f3c4"
 
       def install
         bin.install "ao"
@@ -29,15 +29,15 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.9.1/ao-linux-amd64.tar.gz"
-      sha256 "15ab8f1a668fc5cb93a23cb19cc37cdcc494400ddcf8b417fbc195da5fa033c7"
+      url "https://github.com/boshu2/agentops/releases/download/v2.9.2/ao-linux-amd64.tar.gz"
+      sha256 "8aa7e428fa980fe534710ddf79bdfc756324b157be77b724cbead181da7006be"
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.9.1/ao-linux-arm64.tar.gz"
-      sha256 "c3a480a7293eea98b7f8c423149eacd3d81bedade7624634aaca31fc9e9b3b68"
+      url "https://github.com/boshu2/agentops/releases/download/v2.9.2/ao-linux-arm64.tar.gz"
+      sha256 "649434b5f945365e886ff0e85d0ff00a48b93dc773a4e369003290b48c6bbd2a"
       def install
         bin.install "ao"
       end
