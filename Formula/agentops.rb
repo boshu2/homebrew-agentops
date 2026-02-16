@@ -6,7 +6,7 @@ class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
   version "2.9.0"
-  license "MIT"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
