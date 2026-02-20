@@ -11,7 +11,7 @@ class Agentops < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/boshu2/agentops/releases/download/v2.13.0/ao-darwin-amd64.tar.gz"
-      sha256 "987217f6224e6ed16dcec9d1bdee36e37119ad85e0588796cf0f5a6817115009"
+      sha256 "291d0fff5ad0cbac4b59cdad4da74da82feb66f23c0555f04769987b91916cb4"
 
       def install
         bin.install "ao"
@@ -19,7 +19,7 @@ class Agentops < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/boshu2/agentops/releases/download/v2.13.0/ao-darwin-arm64.tar.gz"
-      sha256 "13dc5cebfddf177a86b2b42eb73385bd7993f9ed1579f09c42355f2aa3d1b675"
+      sha256 "e18d70574fc8f23aad4cfa6508c005c423d8e8be2535a3419a678ccaefe91122"
 
       def install
         bin.install "ao"
@@ -30,14 +30,14 @@ class Agentops < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/boshu2/agentops/releases/download/v2.13.0/ao-linux-amd64.tar.gz"
-      sha256 "21669a05d19852d6b3efb248d8b37498050a3b47b812c5d3d25c85805470c6f8"
+      sha256 "703e11961a54eb85650186bfaeb5e0e3e94498622be26229302cfb11548e986d"
       def install
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/boshu2/agentops/releases/download/v2.13.0/ao-linux-arm64.tar.gz"
-      sha256 "83db1feb872e9f6f63dd22f439dec85f21877529cbc7c740c7869b53d9972625"
+      sha256 "f87ea79aa47cf19f0c2cd3e69d295012d5ea22770f5814dab6b3815d0a4e6dbe"
       def install
         bin.install "ao"
       end
