@@ -5,23 +5,23 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "2.13.2"
+  version "2.14.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v2.13.2/ao-darwin-amd64.tar.gz"
-      sha256 "a56b6f849d872e2472b1fbfc166da154fdbfa2012ce1881bd249cfabf5ce157a"
+      url "https://github.com/boshu2/agentops/releases/download/v2.14.0/ao-darwin-amd64.tar.gz"
+      sha256 "3bd9e45de9e70673a62ba5aea09837a5a99bf730b57ab6885a98e920e7b419fa"
 
-      def install
+      define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v2.13.2/ao-darwin-arm64.tar.gz"
-      sha256 "e35a20b35f36a443d9d218ada2d3df124d69d415656c7991803eb225a05cf46a"
+      url "https://github.com/boshu2/agentops/releases/download/v2.14.0/ao-darwin-arm64.tar.gz"
+      sha256 "6734f609e499b6e68dad913f0c17222cac52878a070f6f11c58a91ac3fc00d98"
 
-      def install
+      define_method(:install) do
         bin.install "ao"
       end
     end
@@ -29,16 +29,16 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.13.2/ao-linux-amd64.tar.gz"
-      sha256 "cad12580b05f1c6fcfaa2096bdcf3542790a89526ba7ea8ab5d6f099228f5c8d"
-      def install
+      url "https://github.com/boshu2/agentops/releases/download/v2.14.0/ao-linux-amd64.tar.gz"
+      sha256 "759e8d69952caf3b1b4b08256a2e863d8e36185428134df3a0c9ec867134580d"
+      define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.13.2/ao-linux-arm64.tar.gz"
-      sha256 "b51f63f76e376759557b29b6b5f73f07e1532bb8e6a240c9d1f83844e3c50718"
-      def install
+      url "https://github.com/boshu2/agentops/releases/download/v2.14.0/ao-linux-arm64.tar.gz"
+      sha256 "68d0f20e173062e093bbb1676f93ebec25c09b42e9fd6d7c4290735a4b13368f"
+      define_method(:install) do
         bin.install "ao"
       end
     end
