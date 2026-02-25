@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "2.17.0"
+  version "2.18.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v2.17.0/ao-darwin-amd64.tar.gz"
-      sha256 "8c0ac034dfa79e0a111980dfd06a75e779c1d4c6ecddf26dc2e544e47af2f76c"
+      url "https://github.com/boshu2/agentops/releases/download/v2.18.0/ao-darwin-amd64.tar.gz"
+      sha256 "fa09cab771ac01cf79358a788fd55a32b5d171de0e5b1ce5f08976ba39941152"
 
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v2.17.0/ao-darwin-arm64.tar.gz"
-      sha256 "0561ba4ab041d492456e5b2c43fd4e756df1cfb1a274c90a977fe707cd2b2f91"
+      url "https://github.com/boshu2/agentops/releases/download/v2.18.0/ao-darwin-arm64.tar.gz"
+      sha256 "03e9d7dae482822fb3a5e6ab212d7ae95b14f093d40687e32e28fe916761a4a3"
 
       define_method(:install) do
         bin.install "ao"
@@ -29,19 +29,23 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.17.0/ao-linux-amd64.tar.gz"
-      sha256 "32063b3c9a6cc9f5d5ba660fe39e1176a40f0db1c4a44acb3a26b12c2a7fcd73"
+      url "https://github.com/boshu2/agentops/releases/download/v2.18.0/ao-linux-amd64.tar.gz"
+      sha256 "23c3aa41427b97fe40436fd98060889d669961d822b2781eb14056bf5faae6d6"
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.17.0/ao-linux-arm64.tar.gz"
-      sha256 "8d65a4109db101b7d99525a99884fb42a6196bdba7329855f5a6987f4bfe26ea"
+      url "https://github.com/boshu2/agentops/releases/download/v2.18.0/ao-linux-arm64.tar.gz"
+      sha256 "e17652dbcfc42bdd55fe751e5774e383c8618477bff26590756bfdf8f116f448"
       define_method(:install) do
         bin.install "ao"
       end
     end
+  end
+
+  def post_install
+    system "codesign", "-f", "-s", "-", "-i", "com.12factoragentops.ao", "#{bin}/ao" if OS.mac?
   end
 
   test do
