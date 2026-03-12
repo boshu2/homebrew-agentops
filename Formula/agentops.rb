@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Knowledge Flywheel CLI for AI-assisted development"
   homepage "https://github.com/boshu2/agentops"
-  version "2.23.0"
+  version "2.24.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v2.23.0/ao-darwin-amd64.tar.gz"
-      sha256 "b1f899a9da04e2900e11d2ab7718a4de00a23ffa03ecc7dc61c4707bb42def63"
+      url "https://github.com/boshu2/agentops/releases/download/v2.24.0/ao-darwin-amd64.tar.gz"
+      sha256 "65104d1e1548b5e7de4ef80fa8d85b40b471652f37f645db9b7325dc3ca890f2"
 
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v2.23.0/ao-darwin-arm64.tar.gz"
-      sha256 "4069f36999b58b70194b732a8bbdc5a736071fd8b127c5b7033d9d8548bd951e"
+      url "https://github.com/boshu2/agentops/releases/download/v2.24.0/ao-darwin-arm64.tar.gz"
+      sha256 "3ef73067f7feaddb14ef979dc0c3f2f3b7bc14f2277bd835d847efb4ece9fb85"
 
       define_method(:install) do
         bin.install "ao"
@@ -29,15 +29,15 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.23.0/ao-linux-amd64.tar.gz"
-      sha256 "ffd01e3a5683b2052127e5480ba5875db2cd2b93d05ef5756ad469ed2bdd3ed5"
+      url "https://github.com/boshu2/agentops/releases/download/v2.24.0/ao-linux-amd64.tar.gz"
+      sha256 "2ec6f376ca6aeba86cba23aafcd3f181e06bdc45fa6a4b20e1700cd5a2859969"
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v2.23.0/ao-linux-arm64.tar.gz"
-      sha256 "9dad79c031a8f5f5afae8de507591410b710a6c3a53b5d206dc0c60b66acfea4"
+      url "https://github.com/boshu2/agentops/releases/download/v2.24.0/ao-linux-arm64.tar.gz"
+      sha256 "c5878ece764ae28d288623ca08a830ad703a622f686a2ed642fbe7dd7f81a303"
       define_method(:install) do
         bin.install "ao"
       end
