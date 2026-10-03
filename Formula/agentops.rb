@@ -5,21 +5,21 @@
 class Agentops < Formula
   desc "Optional AgentOps CLI for deterministic repository checks and evidence linking"
   homepage "https://github.com/boshu2/agentops"
-  version "3.8.0"
+  version "3.9.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boshu2/agentops/releases/download/v3.8.0/ao-darwin-amd64.tar.gz"
-      sha256 "8caca6dd14d74dc08755813574de905c983d5fa441d6ffad9ac75d71dcd24058"
+      url "https://github.com/boshu2/agentops/releases/download/v3.9.0/ao-darwin-amd64.tar.gz"
+      sha256 "01ae2ecdacab0f1b8a6f3db922490aa46923e5b2617758edc0749e69d59e6aac"
 
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boshu2/agentops/releases/download/v3.8.0/ao-darwin-arm64.tar.gz"
-      sha256 "01be86651c50309e7eec69dd6b7a558a7626f6915b57ddfcfa5e5c5d58102f72"
+      url "https://github.com/boshu2/agentops/releases/download/v3.9.0/ao-darwin-arm64.tar.gz"
+      sha256 "c1265eb31a70acd251b6d71f06649f50621c25864d8e2822e1f4c285ac4c0626"
 
       define_method(:install) do
         bin.install "ao"
@@ -29,15 +29,15 @@ class Agentops < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v3.8.0/ao-linux-amd64.tar.gz"
-      sha256 "7ba19c690a3de6eb16d16fa0d101fe1d5936bbba20d7f23c62c57038152c02b2"
+      url "https://github.com/boshu2/agentops/releases/download/v3.9.0/ao-linux-amd64.tar.gz"
+      sha256 "3d3a8a23e0ab4d7fcf4f57ac06122d8f6b66add6bd588b466713969421e28d38"
       define_method(:install) do
         bin.install "ao"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boshu2/agentops/releases/download/v3.8.0/ao-linux-arm64.tar.gz"
-      sha256 "1e5e2d8de7d18739dbe120a5b4fcb76eefeeb93464f8b117f8e5c16e79cdc45e"
+      url "https://github.com/boshu2/agentops/releases/download/v3.9.0/ao-linux-arm64.tar.gz"
+      sha256 "483cdcfd7180969ff156d9257b6632ae781d43d1a534e560a2fae5d915a5c47d"
       define_method(:install) do
         bin.install "ao"
       end
